@@ -1,33 +1,38 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-	public float speed;
-	public Collider2D timeSphere;
+    public float Speed;
+    public Collider2D TimeSphere;
 
-	private bool isCanMove;
-	private Rigidbody2D _rigidbody2D;
-	private Collider2D _collider2D;
+    private bool _isCanMove;
+    private IEnumerator<Vector3> _routListEnumerator;
 
-	
-	// Use this for initialization
-	void Start ()
-	{
-		isCanMove = false;
-		_rigidbody2D = GetComponent<Rigidbody2D>();
-		_collider2D = GetComponent<Collider2D>();
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
+    [SerializeField] private List<Vector3> _routList;
 
-		isCanMove = _collider2D.bounds.Intersects(timeSphere.bounds);
-		
-		
-		if (isCanMove) _rigidbody2D.velocity = new Vector2(-1 * speed, _rigidbody2D.velocity.y);
-	}
+
+    // Use this for initialization
+    void Start()
+    {
+        _isCanMove = false;
+        _routListEnumerator = new InfiniteLoopEnumerator<Vector3>(_routList);
+        _routListEnumerator.MoveNext();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        _isCanMove = Vector3.Distance(transform.position, TimeSphere.transform.position) <= TimeSphere.bounds.size.x / 2;
+        if (_isCanMove) FollowRoute();
+    }
+
+    private void FollowRoute()
+    {
+        var direction = _routListEnumerator.Current - transform.position;
+        transform.Translate(direction.normalized * Speed * Time.deltaTime, Space.World);
+        if (Vector3.Distance(transform.position, _routListEnumerator.Current) < 0.1f) _routListEnumerator.MoveNext();
+    }
 }

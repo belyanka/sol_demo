@@ -25,6 +25,7 @@
           <e p="FollowPlayer.cs" t="Include" />
           <e p="Gun.cs" t="Include" />
           <e p="HealthPickup.cs" t="Include" />
+          <e p="InfiniteLoopEnumerator.cs" t="Include" />
           <e p="LayBombs.cs" t="Include" />
           <e p="Pauser.cs" t="Include" />
           <e p="PickupSpawner.cs" t="Include" />
