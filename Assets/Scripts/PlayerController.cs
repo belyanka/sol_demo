@@ -31,13 +31,13 @@ public class PlayerController : MonoBehaviour
 
 		if (Input.GetButtonDown("Jump") && grounded)
 		{
-			_rigidbody2D.AddForce(transform.up*10f, ForceMode2D.Impulse);
+			_rigidbody2D.AddForce(transform.up*20f, ForceMode2D.Impulse);
 		}
 	}
 	
 	private void FixedUpdate()
 	{
-		float moveHorizontal = Input.GetAxis("Horizontal");
+		float moveHorizontal = Input.GetAxisRaw("Horizontal");
 
 		_rigidbody2D.velocity = new Vector2(moveHorizontal * speed, _rigidbody2D.velocity.y);
 

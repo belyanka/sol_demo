@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e960cd1c-27d1-4ab4-aa62-e26812833649" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/InfiniteLoopEnumerator.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/InfiniteLoopEnumerator.cs.meta" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.sol_demo/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.sol_demo/.idea/contentModel.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.sol_demo/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.sol_demo/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/_Spritesheet.png.meta" afterPath="$PROJECT_DIR$/Assets/Sprites/_Spritesheet.png.meta" />
       <change beforePath="$PROJECT_DIR$/Assets/_scenes/Main.unity" afterPath="$PROJECT_DIR$/Assets/_scenes/Main.unity" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,19 +16,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PlayerController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlayerController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="128" lean-forward="false" selection-start-line="28" selection-start-column="128" selection-end-line="28" selection-end-column="128" />
+            <state relative-caret-position="197">
+              <caret line="29" column="146" lean-forward="false" selection-start-line="29" selection-start-column="115" selection-end-line="29" selection-end-column="146" />
               <folding>
-                <marker date="1515104736000" expanded="true" signature="6:103" ph="..." />
-                <marker date="1515104736000" expanded="true" signature="150:1336" ph="{...}" />
-                <marker date="1515104736000" expanded="true" signature="318:451" ph="{...}" />
-                <marker date="1515104736000" expanded="true" signature="475:1154" ph="{...}" />
-                <marker date="1515104736000" expanded="true" signature="481:887" ph="/* так работало видимо лишь из-за погрешности деления пополам, т.к. .bounds.min должен возвращать то же самое, ... */" />
-                <marker date="1515104736000" expanded="true" signature="1078:1151" ph="{...}" />
-                <marker date="1515104736000" expanded="true" signature="1184:1334" ph="{...}" />
+                <marker date="1515164481000" expanded="true" signature="6:103" ph="..." />
+                <marker date="1515164481000" expanded="true" signature="150:1339" ph="{...}" />
+                <marker date="1515164481000" expanded="true" signature="318:451" ph="{...}" />
+                <marker date="1515164481000" expanded="true" signature="475:1154" ph="{...}" />
+                <marker date="1515164481000" expanded="true" signature="481:887" ph="/* так работало видимо лишь из-за погрешности деления пополам, т.к. .bounds.min должен возвращать то же самое, ... */" />
+                <marker date="1515164481000" expanded="true" signature="1078:1151" ph="{...}" />
+                <marker date="1515164481000" expanded="true" signature="1184:1337" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ButtonController.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ButtonController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+              <folding>
+                <marker date="1515178786000" expanded="true" signature="65:575" ph="{...}" />
+                <marker date="1515178786000" expanded="true" signature="116:183" ph="{...}" />
+                <marker date="1515178786000" expanded="true" signature="233:336" ph="{...}" />
+                <marker date="1515178786000" expanded="true" signature="255:333" ph="{...}" />
+                <marker date="1515178786000" expanded="true" signature="385:483" ph="{...}" />
+                <marker date="1515178786000" expanded="true" signature="410:480" ph="{...}" />
+                <marker date="1515178786000" expanded="true" signature="510:572" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -41,8 +55,8 @@
       <file leaf-file-name="EnemyController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/EnemyController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="246">
+              <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
               <folding>
                 <marker date="1515104108000" expanded="true" signature="6:116" ph="..." />
                 <marker date="1515104108000" expanded="true" signature="162:1131" ph="{...}" />
@@ -111,11 +125,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8CDD91C3-618B-427B-905E-B298374EEE86/72/0e33140a/List`1.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F044FE2C-9E7E-4B8E-9198-4B41F0CF0B04/ee/021e057e/StringEnumerator.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bomb.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7EE3E9DB-7221-449F-BD43-DC81973FB5B6/f7/81d0f407/Bounds.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8CDD91C3-618B-427B-905E-B298374EEE86/f2/07975bd7/IEnumerator.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7EE3E9DB-7221-449F-BD43-DC81973FB5B6/f4/ae1240c0/Vector2.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0F1095B1-690F-4EFC-A4C4-43F94689AA0E/95/0e6414b3/Void.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F044FE2C-9E7E-4B8E-9198-4B41F0CF0B04/c7/3bd8e616/LinkedList`1.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7EE3E9DB-7221-449F-BD43-DC81973FB5B6/e1/f8426dc6/Input.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InfiniteLoopEnumerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7EE3E9DB-7221-449F-BD43-DC81973FB5B6/29/a2a1cb22/Transform.cs" root0="SKIP_INSPECTION" />
@@ -127,6 +144,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InfiniteLoopEnumerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonController.cs" />
       </list>
     </option>
   </component>
@@ -221,12 +239,20 @@
       <option name="presentableId" value="Default" />
       <updated>1515072396221</updated>
       <workItem from="1515072402854" duration="11066000" />
-      <workItem from="1515093345078" duration="8426000" />
+      <workItem from="1515093345078" duration="12352000" />
     </task>
+    <task id="LOCAL-00001" summary="заготовка первого уровня">
+      <created>1515104774172</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1515104774172</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19492000" />
+    <option name="totallyTimeSpent" value="23418000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -243,17 +269,17 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5129412" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25902778" sideWeight="0.49058825" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25902778" sideWeight="0.48727983" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25902778" sideWeight="0.50941175" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39882353" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25902778" sideWeight="0.51272017" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39882353" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -270,11 +296,24 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="заготовка первого уровня" />
+    <option name="LAST_COMMIT_MESSAGE" value="заготовка первого уровня" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>moveHorizontal &gt; 0</expression-string>
+        <language-id>C#</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
@@ -282,13 +321,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1515104736000" expanded="true" signature="6:103" ph="..." />
-            <marker date="1515104736000" expanded="true" signature="150:1336" ph="{...}" />
-            <marker date="1515104736000" expanded="true" signature="318:451" ph="{...}" />
-            <marker date="1515104736000" expanded="true" signature="475:1154" ph="{...}" />
-            <marker date="1515104736000" expanded="true" signature="481:887" ph="/* так работало видимо лишь из-за погрешности деления пополам, т.к. .bounds.min должен возвращать то же самое, ... */" />
-            <marker date="1515104736000" expanded="true" signature="1078:1151" ph="{...}" />
-            <marker date="1515104736000" expanded="true" signature="1184:1334" ph="{...}" />
+            <marker date="1515164481000" expanded="true" signature="6:103" ph="..." />
+            <marker date="1515164481000" expanded="true" signature="150:1339" ph="{...}" />
+            <marker date="1515164481000" expanded="true" signature="318:451" ph="{...}" />
+            <marker date="1515164481000" expanded="true" signature="475:1154" ph="{...}" />
+            <marker date="1515164481000" expanded="true" signature="481:887" ph="/* так работало видимо лишь из-за погрешности деления пополам, т.к. .bounds.min должен возвращать то же самое, ... */" />
+            <marker date="1515164481000" expanded="true" signature="1078:1151" ph="{...}" />
+            <marker date="1515164481000" expanded="true" signature="1184:1337" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -584,10 +623,121 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7EE3E9DB-7221-449F-BD43-DC81973FB5B6/f7/81d0f407/Bounds.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8">
+          <caret line="161" column="19" lean-forward="false" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7EE3E9DB-7221-449F-BD43-DC81973FB5B6/e1/f8426dc6/Input.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="55" column="31" lean-forward="false" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+          <folding>
+            <marker date="1515163964000" expanded="true" signature="0:277" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1515163964000" expanded="false" signature="285:360" ph="..." />
+            <marker date="1515163964000" expanded="true" signature="383:18332" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="388:472" ph="///   &lt;para&gt;Interface into the Input system.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="500:18330" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="1685:1842" ph="///   &lt;para&gt;Returns the value of the virtual axis identified by axisName.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="1992:2185" ph="///   &lt;para&gt;Returns the value of the virtual axis identified by axisName with no smoothing filtering applied.&lt;/pa ... " />
+            <marker date="1515163964000" expanded="true" signature="2338:2512" ph="///   &lt;para&gt;Returns true while the virtual button identified by buttonName is held down.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="2665:2806" ph="///   &lt;para&gt;This property controls if input sensors should be compensated for screen orientation.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="3271:3353" ph="///   &lt;para&gt;Returns default gyroscope.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="3386:3571" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="3402:3565" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="3577:3771" ph="///   &lt;para&gt;Returns true during the frame the user pressed down the virtual button identified by buttonName.&lt;/par ... " />
+            <marker date="1515163964000" expanded="true" signature="3928:4117" ph="///   &lt;para&gt;Returns true the first frame the user releases the virtual button identified by buttonName.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="4272:4447" ph="///   &lt;para&gt;Returns true while the user holds down the key identified by name. Think auto fire.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="4490:4541" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="4547:4730" ph="///   &lt;para&gt;Returns true while the user holds down the key identified by the key KeyCode enum parameter.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="4773:4826" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="4832:5011" ph="///   &lt;para&gt;Returns true during the frame the user starts pressing down the key identified by name.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="5058:5113" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="5119:5323" ph="///   &lt;para&gt;Returns true during the frame the user starts pressing down the key identified by the key KeyCode enu ... " />
+            <marker date="1515163964000" expanded="true" signature="5370:5427" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="5433:5600" ph="///   &lt;para&gt;Returns true during the frame the user releases the key identified by name.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="5645:5698" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="5704:5896" ph="///   &lt;para&gt;Returns true during the frame the user releases the key identified by the key KeyCode enum parameter. ... " />
+            <marker date="1515163964000" expanded="true" signature="5941:5996" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="6002:6121" ph="///   &lt;para&gt;Returns an array of strings describing the connected joysticks.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="6268:6660" ph="///   &lt;para&gt;Determine whether a particular joystick model has been preconfigured by Unity. (Linux-only).&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="6829:6975" ph="///   &lt;para&gt;Returns whether the given mouse button is held down.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="7126:7290" ph="///   &lt;para&gt;Returns true during the frame the user pressed the given mouse button.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="7445:7610" ph="///   &lt;para&gt;Returns true during the frame the user releases the given mouse button.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="7763:7921" ph="///   &lt;para&gt;Resets all input. After ResetInputAxes all axes return to 0 and all buttons return to 0 for one frame ... " />
+            <marker date="1515163964000" expanded="true" signature="8062:8178" ph="///   &lt;para&gt;The current mouse position in pixel coordinates. (Read Only)&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="8218:8360" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="8234:8354" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="8532:8631" ph="///   &lt;para&gt;The current mouse scroll delta. (Read Only)&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="8674:8819" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="8690:8813" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="8994:9090" ph="///   &lt;para&gt;Indicates if a mouse device is detected.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="9226:9364" ph="///   &lt;para&gt;Enables/Disables mouse simulation with touches. By default this option is enabled.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="9595:9710" ph="///   &lt;para&gt;Is any key or mouse button currently held down? (Read Only)&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="9840:9975" ph="///   &lt;para&gt;Returns true the first frame the user hits any key or mouse button. (Read Only)&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="10109:10223" ph="///   &lt;para&gt;Returns the keyboard input entered this frame. (Read Only)&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="10360:10501" ph="///   &lt;para&gt;Last measured linear acceleration of a device in three-dimensional space. (Read Only)&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="10540:10681" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="10556:10675" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="10852:11032" ph="///   &lt;para&gt;Returns list of acceleration measurements which occurred during the last frame. (Read Only) (Allocate ... " />
+            <marker date="1515163964000" expanded="true" signature="11089:11479" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="11105:11473" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="11485:11694" ph="///   &lt;para&gt;Returns specific acceleration measurement which occurred during last frame. (Does not allocate tempor ... " />
+            <marker date="1515163964000" expanded="true" signature="11762:11927" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="12128:12253" ph="///   &lt;para&gt;Number of acceleration measurements which occurred during last frame.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="12398:12576" ph="///   &lt;para&gt;Returns list of objects representing status of all touches during last frame. (Read Only) (Allocates  ... " />
+            <marker date="1515163964000" expanded="true" signature="12610:12880" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="12626:12874" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="12886:13075" ph="///   &lt;para&gt;Returns object representing status of a specific touch. (Does not allocate temporary variables).&lt;/par ... " />
+            <marker date="1515163964000" expanded="true" signature="13119:13224" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="13401:13534" ph="///   &lt;para&gt;Number of touches. Guaranteed not to change throughout the frame. (Read Only)&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="13667:13818" ph="///   &lt;para&gt;Property indicating whether keypresses are eaten by a textinput if it has focus (default true).&lt;/para ... " />
+            <marker date="1515163964000" expanded="true" signature="14168:14290" ph="///   &lt;para&gt;Bool value which let's users check if touch pressure is supported.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="14436:14560" ph="///   &lt;para&gt;Returns true when Stylus Touch is supported by a device or platform.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="14704:14850" ph="///   &lt;para&gt;Returns whether the device on which application is currently running supports touch input.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="14988:15108" ph="///   &lt;para&gt;Property indicating whether the system handles multiple touches.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="15332:15463" ph="///   &lt;para&gt;Property for accessing device location (handheld devices only). (Read Only)&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="15506:15706" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="15522:15700" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="15712:15835" ph="///   &lt;para&gt;Property for accessing compass (handheld devices only). (Read Only)&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="15869:16037" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="15885:16031" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="16043:16157" ph="///   &lt;para&gt;Device physical orientation as reported by OS. (Read Only)&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="16311:16424" ph="///   &lt;para&gt;Controls enabling and disabling of IME input composition.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="16663:16778" ph="///   &lt;para&gt;The current IME composition string being typed by the user.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="16921:17034" ph="///   &lt;para&gt;Does the user have an IME keyboard input source selected?&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="17171:17288" ph="///   &lt;para&gt;The current text input position used by IMEs to open windows.&lt;/para&gt; ... " />
+            <marker date="1515163964000" expanded="true" signature="17335:17570" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="17351:17478" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="17488:17564" ph="{...}" />
+            <marker date="1515163964000" expanded="true" signature="17922:18106" ph="///         &lt;para&gt;Should  Back button quit the application? ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0F1095B1-690F-4EFC-A4C4-43F94689AA0E/95/0e6414b3/Void.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/EnemyController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="246">
+          <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
           <folding>
             <marker date="1515104108000" expanded="true" signature="6:116" ph="..." />
             <marker date="1515104108000" expanded="true" signature="162:1131" ph="{...}" />
@@ -598,26 +748,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7EE3E9DB-7221-449F-BD43-DC81973FB5B6/f7/81d0f407/Bounds.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="161" column="19" lean-forward="false" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="197">
+          <caret line="29" column="146" lean-forward="false" selection-start-line="29" selection-start-column="115" selection-end-line="29" selection-end-column="146" />
+          <folding>
+            <marker date="1515164481000" expanded="true" signature="6:103" ph="..." />
+            <marker date="1515164481000" expanded="true" signature="150:1339" ph="{...}" />
+            <marker date="1515164481000" expanded="true" signature="318:451" ph="{...}" />
+            <marker date="1515164481000" expanded="true" signature="475:1154" ph="{...}" />
+            <marker date="1515164481000" expanded="true" signature="481:887" ph="/* так работало видимо лишь из-за погрешности деления пополам, т.к. .bounds.min должен возвращать то же самое, ... */" />
+            <marker date="1515164481000" expanded="true" signature="1078:1151" ph="{...}" />
+            <marker date="1515164481000" expanded="true" signature="1184:1337" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ButtonController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="128" lean-forward="false" selection-start-line="28" selection-start-column="128" selection-end-line="28" selection-end-column="128" />
+        <state relative-caret-position="236">
+          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
           <folding>
-            <marker date="1515104736000" expanded="true" signature="6:103" ph="..." />
-            <marker date="1515104736000" expanded="true" signature="150:1336" ph="{...}" />
-            <marker date="1515104736000" expanded="true" signature="318:451" ph="{...}" />
-            <marker date="1515104736000" expanded="true" signature="475:1154" ph="{...}" />
-            <marker date="1515104736000" expanded="true" signature="481:887" ph="/* так работало видимо лишь из-за погрешности деления пополам, т.к. .bounds.min должен возвращать то же самое, ... */" />
-            <marker date="1515104736000" expanded="true" signature="1078:1151" ph="{...}" />
-            <marker date="1515104736000" expanded="true" signature="1184:1334" ph="{...}" />
+            <marker date="1515178786000" expanded="true" signature="65:575" ph="{...}" />
+            <marker date="1515178786000" expanded="true" signature="116:183" ph="{...}" />
+            <marker date="1515178786000" expanded="true" signature="233:336" ph="{...}" />
+            <marker date="1515178786000" expanded="true" signature="255:333" ph="{...}" />
+            <marker date="1515178786000" expanded="true" signature="385:483" ph="{...}" />
+            <marker date="1515178786000" expanded="true" signature="410:480" ph="{...}" />
+            <marker date="1515178786000" expanded="true" signature="510:572" ph="{...}" />
           </folding>
         </state>
       </provider>
