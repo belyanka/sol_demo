@@ -13,25 +13,21 @@
             </e>
           </e>
         </e>
-        <e p="Scripts" t="Include">
+        <e p="ScriptExamples" t="Include">
           <e p="BackgroundParallax.cs" t="Include" />
           <e p="BackgroundPropSpawner.cs" t="Include" />
           <e p="Bomb.cs" t="Include" />
           <e p="BombPickup.cs" t="Include" />
-          <e p="ButtonController.cs" t="Include" />
           <e p="CameraFollow.cs" t="Include" />
           <e p="Destroyer.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
-          <e p="EnemyController.cs" t="Include" />
           <e p="FollowPlayer.cs" t="Include" />
           <e p="Gun.cs" t="Include" />
           <e p="HealthPickup.cs" t="Include" />
-          <e p="InfiniteLoopEnumerator.cs" t="Include" />
           <e p="LayBombs.cs" t="Include" />
           <e p="Pauser.cs" t="Include" />
           <e p="PickupSpawner.cs" t="Include" />
           <e p="PlayerControl.cs" t="Include" />
-          <e p="PlayerController.cs" t="Include" />
           <e p="PlayerHealth.cs" t="Include" />
           <e p="Remover.cs" t="Include" />
           <e p="Rocket.cs" t="Include" />
@@ -40,6 +36,15 @@
           <e p="SetParticleSortingLayer.cs" t="Include" />
           <e p="Spawner.cs" t="Include" />
           <e p="TimeFlow.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="ButtonController.cs" t="Include" />
+          <e p="DoorController.cs" t="Include" />
+          <e p="EnemyController.cs" t="Include" />
+          <e p="IButtonSubscriber.cs" t="Include" />
+          <e p="InfiniteLoopEnumerator.cs" t="Include" />
+          <e p="INotifier.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
