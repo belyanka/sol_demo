@@ -6,6 +6,8 @@ using UnityEngine.Video;
 public class PlayerController : MonoBehaviour
 {
 	public float speed;
+	public LayerMask groundMask;
+	public Transform groundCheck;
 	
 	private Vector2 direction;
 	private bool grounded;
@@ -26,8 +28,8 @@ public class PlayerController : MonoBehaviour
 		
 		//var bottom = new Vector2(transform.position.x, transform.position.y - _collider2D.bounds.size.y / 2); 
 		
-		//todo: такая реализация не позволяет прыгать, если ты на самом краю платформы - чекается только земля посередине игрока
-		grounded = Physics2D.Linecast(transform.position, _collider2D.bounds.min + new Vector3(0, -0.01f, 0), 1 << LayerMask.NameToLayer("Ground"));
+		//grounded = Physics2D.Linecast(transform.position, _collider2D.bounds.min + new Vector3(0, -0.01f, 0), 1 << LayerMask.NameToLayer("Ground"));
+		grounded = Physics2D.OverlapCircle(groundCheck.position,0.2f,groundMask);
 
 		if (Input.GetButtonDown("Jump") && grounded)
 		{
