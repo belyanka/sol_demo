@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : TimeStopable
 {
     public float Speed;
-    public Collider2D TimeSphere;
 
     private bool _isCanMove;
     private IEnumerator<Vector3> _routListEnumerator;
@@ -23,9 +22,8 @@ public class EnemyController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        _isCanMove = Vector3.Distance(transform.position, TimeSphere.transform.position) <= TimeSphere.bounds.size.x / 2;
+    void Update() {
+        _isCanMove = IsCanMove();
         if (_isCanMove) FollowRoute();
     }
 

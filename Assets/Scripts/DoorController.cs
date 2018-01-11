@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DoorController : MonoBehaviour, IButtonSubscriber
+public class DoorController : TimeStopable, IButtonSubscriber
 {
     public ButtonController button;
 

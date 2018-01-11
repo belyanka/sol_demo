@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 
-public class ButtonController : MonoBehaviour, INotifier<IButtonSubscriber>
+public class ButtonController : TimeStopable, INotifier<IButtonSubscriber>
 {	
 	private Sprite _sprite;
 	private List<IButtonSubscriber> _subscribers;
