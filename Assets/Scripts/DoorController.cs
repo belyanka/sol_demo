@@ -10,6 +10,7 @@ public class DoorController : TimeStopable, IButtonSubscriber
     public ButtonController button;
 
     private Sprite _sprite;
+    [SerializeField]
     private Collider2D _doorCollider;
 
 
@@ -18,12 +19,6 @@ public class DoorController : TimeStopable, IButtonSubscriber
     {
         button.Subscribe(this);
         _sprite = GetComponentInChildren<SpriteRenderer>().sprite;
-        _doorCollider = GameObject.Find("DoorCollider").GetComponent<Collider2D>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 
     public void Open()
