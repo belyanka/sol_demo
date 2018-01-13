@@ -39,6 +39,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="ButtonController.cs" t="Include" />
+          <e p="CameraMovement.cs" t="Include" />
           <e p="DoorController.cs" t="Include" />
           <e p="EnemyController.cs" t="Include" />
           <e p="IButtonSubscriber.cs" t="Include" />
