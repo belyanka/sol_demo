@@ -12,6 +12,8 @@ public class DoorController : TimeStopable, IButtonSubscriber
     private Sprite _sprite;
     [SerializeField]
     private Collider2D _doorCollider;
+    [SerializeField]
+    private GameController gameController;
 
 
     // Use this for initialization
@@ -47,7 +49,7 @@ public class DoorController : TimeStopable, IButtonSubscriber
     {
         if (other.name == "Player")
         {
-            //todo: lvl completion
+            gameController.LevelFinished();
             
             Debug.Log("LVL COMPLETE");
         }
