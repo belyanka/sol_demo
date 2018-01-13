@@ -7,18 +7,22 @@ using UnityEngine.UI;
 
 public class DoorController : TimeStopable, IButtonSubscriber
 {
-    public ButtonController button;
+    public List<ButtonController> buttons;
+    public Collider2D _doorCollider;
 
     private Sprite _sprite;
-    [SerializeField]
-    private Collider2D _doorCollider;
+    private int _pressedButtonsNum;
 
+    private void Awake()
+    {
+        _pressedButtonsNum = 0;
+        _sprite = GetComponentInChildren<SpriteRenderer>().sprite;
+    }
 
     // Use this for initialization
     void Start()
     {
-        button.Subscribe(this);
-        _sprite = GetComponentInChildren<SpriteRenderer>().sprite;
+        buttons.ForEach(b => b.Subscribe(this));
     }
 
     public void Open()
@@ -35,11 +39,13 @@ public class DoorController : TimeStopable, IButtonSubscriber
 
     public void OnButtonPressed(ButtonController b)
     {
-        Open();
+        _pressedButtonsNum++;
+        if (_pressedButtonsNum == buttons.Count) Open();
     }
 
     public void OnButtonReleased(ButtonController b)
     {
+        _pressedButtonsNum--;
         Close();
     }
 

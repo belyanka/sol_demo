@@ -10,10 +10,14 @@ public class ButtonController : TimeStopable, INotifier<IButtonSubscriber>
 
 	public bool IsPressed { get; private set; }
 
+	private void Awake()
+	{
+		_subscribers = new List<IButtonSubscriber>();
+		IsPressed = false;
+	}
+
 	private void Start()
 	{
-		IsPressed = false;
-		_subscribers = new List<IButtonSubscriber>();
 		_sprite = GetComponentInChildren<SpriteRenderer>().sprite;
 	}
 
