@@ -9,9 +9,11 @@ public class DoorController : TimeStopable, IButtonSubscriber
 {
     public List<ButtonController> buttons;
     public Collider2D _doorCollider;
+    public GameController gameController;
 
     private Sprite _sprite;
     private int _pressedButtonsNum;
+    
 
     private void Awake()
     {
@@ -53,7 +55,7 @@ public class DoorController : TimeStopable, IButtonSubscriber
     {
         if (other.name == "Player")
         {
-            //todo: lvl completion
+            gameController.LevelFinished();
             
             Debug.Log("LVL COMPLETE");
         }

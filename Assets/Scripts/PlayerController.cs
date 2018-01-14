@@ -8,7 +8,9 @@ public class PlayerController : MonoBehaviour
 	public float speed;
 	public LayerMask groundMask;
 	public Transform groundCheck;
-	
+
+	[SerializeField] 
+	private GameController gameController;
 	private Vector2 direction;
 	private bool grounded;
 	private Rigidbody2D _rigidbody2D;
@@ -43,5 +45,13 @@ public class PlayerController : MonoBehaviour
 
 		_rigidbody2D.velocity = new Vector2(moveHorizontal * speed, _rigidbody2D.velocity.y);
 
+	}
+
+	public void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.CompareTag("Enemy"))
+		{
+			gameController.GameOver();
+		}
 	}
 }

@@ -42,6 +42,7 @@
           <e p="CameraMovement.cs" t="Include" />
           <e p="DoorController.cs" t="Include" />
           <e p="EnemyController.cs" t="Include" />
+          <e p="GameController.cs" t="Include" />
           <e p="IButtonSubscriber.cs" t="Include" />
           <e p="InfiniteLoopEnumerator.cs" t="Include" />
           <e p="INotifier.cs" t="Include" />
