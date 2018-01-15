@@ -1031,7 +1031,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   groundCheck: {fileID: 2066997389}
-  gameController: {fileID: 0}
+  gameController: {fileID: 1962541736}
 --- !u!1 &798091721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,7 +2189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeSphere: {fileID: 1367729253}
-  button: {fileID: 1149103800}
+  buttons:
+  - {fileID: 1149103800}
   _doorCollider: {fileID: 381958879}
   gameController: {fileID: 1962541736}
 --- !u!61 &2095400822

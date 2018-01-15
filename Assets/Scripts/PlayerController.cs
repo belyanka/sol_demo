@@ -7,10 +7,9 @@ public class PlayerController : MonoBehaviour
 {
 	public float speed;
 	public LayerMask groundMask;
-	public Transform groundCheck;
-
-	[SerializeField] 
-	private GameController gameController;
+	public Transform groundCheck; 
+	public GameController gameController;
+	
 	private Vector2 direction;
 	private bool grounded;
 	private Rigidbody2D _rigidbody2D;
