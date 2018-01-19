@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+/**
+ * Repeats children objects
+ */
 public class MovingBackground : MonoBehaviour {
 
 	public float scrollSpeed;
 	public bool repeated;
-	public List<Transform> panels;
 	public float panelSize;
 	public float scrollViewSize;
-
+	
+	private List<Transform> panels;
 	private Vector3 lastCameraPosition;
 	private Camera camera;
 
@@ -18,6 +21,11 @@ public class MovingBackground : MonoBehaviour {
 	{
 		camera = Camera.main;
 		lastCameraPosition = camera.transform.position;
+		panels = new List<Transform>();
+		for (int i = 0; i < transform.childCount; i++)
+		{
+			panels.Add(transform.GetChild(i));
+		}
 	}
 
 	// Update is called once per frame
@@ -35,7 +43,7 @@ public class MovingBackground : MonoBehaviour {
 			if ( camera.transform.position.x > currentPosition+scrollViewSize)
 			{
 				//move first panel
-				panels[0].transform.position = new Vector3(panels[0].transform.position.x + 3*panelSize,
+				panels[0].transform.position = new Vector3(panels[0].transform.position.x + panels.Count*panelSize,
 					panels[0].transform.position.y, panels[0].transform.position.z);
 				
 				panels.Add(panels[0]);
@@ -44,7 +52,7 @@ public class MovingBackground : MonoBehaviour {
 			else if (camera.transform.position.x < currentPosition-scrollViewSize)
 			{
 				//move third panel
-				panels[panels.Count-1].transform.position = new Vector3(panels[panels.Count-1].transform.position.x - 3*panelSize,
+				panels[panels.Count-1].transform.position = new Vector3(panels[panels.Count-1].transform.position.x - panels.Count*panelSize,
 					panels[panels.Count-1].transform.position.y, panels[panels.Count-1].transform.position.z);
 				
 				panels.Insert(0,panels[panels.Count-1]);
