@@ -683,7 +683,7 @@ Prefab:
       objectReference: {fileID: 1367729253}
     - target: {fileID: 1773223126177170, guid: cff3b6cbfab8207459b8c4d81aed01ed, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cff3b6cbfab8207459b8c4d81aed01ed, type: 2}
@@ -781,7 +781,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 652822004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.637, y: -2.969, z: 0}
+  m_LocalPosition: {x: 0.24, y: -2.969, z: 0}
   m_LocalScale: {x: 0.925, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1705957845}
@@ -804,7 +804,7 @@ BoxCollider2D:
     border: {x: 1.4599999, y: 1.0799999, z: 1.5899999, w: 1.5}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 6.08, y: 5.42}
-    newSize: {x: 64.92675, y: 5.3576336}
+    newSize: {x: 31.638845, y: 5.3576336}
     adaptiveTilingThreshold: 0.23
     drawMode: 2
     adaptiveTiling: 0
@@ -849,7 +849,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 64.92675, y: 5.3576336}
+  m_Size: {x: 31.638845, y: 5.3576336}
   m_AdaptiveModeThreshold: 0.23
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1010,7 +1010,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 793971811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.08, y: 0.55, z: 0}
+  m_LocalPosition: {x: -6.58, y: 0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 340118190}
@@ -1641,7 +1641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1149103798
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1909,34 +1909,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1280773918}
---- !u!1 &1320240293
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1320240294}
-  m_Layer: 0
-  m_Name: Lever
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1320240294
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1320240293}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.91, y: 1.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1367729251
 GameObject:
   m_ObjectHideFlags: 0
@@ -2237,10 +2209,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollSpeed: 0.3
   repeated: 1
-  panels:
-  - {fileID: 1857654316}
-  - {fileID: 1237959147}
-  - {fileID: 1410682905}
   panelSize: 10
   scrollViewSize: 5
 --- !u!1 &1705957844
@@ -2414,7 +2382,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44158906, y: 0.058772564}
+  m_Offset: {x: -0.048992515, y: 0.058772564}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2425,7 +2393,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3408885, y: 1.274272}
+  m_Size: {x: 1.3597252, y: 1.274272}
   m_EdgeRadius: 0
 --- !u!4 &1973106565
 Transform:
@@ -2484,7 +2452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2095400821
 MonoBehaviour:
   m_ObjectHideFlags: 0
