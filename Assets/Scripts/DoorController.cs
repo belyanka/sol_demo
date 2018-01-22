@@ -8,8 +8,6 @@ using UnityEngine.UI;
 public class DoorController : TimeStopable, IButtonSubscriber
 {
     public List<ButtonController> buttons;
-    public Collider2D _doorCollider;
-    public GameController gameController;
 
     private Sprite _sprite;
     private int _pressedButtonsNum;
@@ -29,13 +27,13 @@ public class DoorController : TimeStopable, IButtonSubscriber
 
     public void Open()
     {
-        _doorCollider.enabled = false;
+        GetComponent<Collider2D>().enabled = false;
         GetComponentInChildren<SpriteRenderer>().sprite = default(Sprite);
     }
 
     public void Close()
     {
-        _doorCollider.enabled = true;
+        GetComponent<Collider2D>().enabled = true;
         GetComponentInChildren<SpriteRenderer>().sprite = _sprite;
     }
 
@@ -49,15 +47,5 @@ public class DoorController : TimeStopable, IButtonSubscriber
     {
         _pressedButtonsNum--;
         Close();
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.name == "Player")
-        {
-            gameController.LevelFinished();
-            
-            Debug.Log("LVL COMPLETE");
-        }
     }
 }
