@@ -5,18 +5,28 @@ using UnityEngine;
 
 public class ButtonController : TimeStopable, INotifier<IButtonSubscriber>
 {	
-	private Sprite _sprite;
-	private List<IButtonSubscriber> _subscribers;
+	protected Sprite _sprite;
+	protected List<IButtonSubscriber> _subscribers;
 
-	public bool IsPressed { get; private set; }
+	public bool IsPressed { get; protected set; }
 
 	private void Awake()
+	{
+		OnAwake();
+	}
+
+	protected void OnAwake()
 	{
 		_subscribers = new List<IButtonSubscriber>();
 		IsPressed = false;
 	}
 
 	private void Start()
+	{
+		OnStart();
+	}
+
+	protected void OnStart()
 	{
 		_sprite = GetComponentInChildren<SpriteRenderer>().sprite;
 	}
@@ -31,7 +41,7 @@ public class ButtonController : TimeStopable, INotifier<IButtonSubscriber>
 		if (IsPressed && !IsMustBePressed()) Release();
 	}
 
-	private bool IsMustBePressed()
+	protected bool IsMustBePressed()
 	{
 		return GetComponent<Collider2D>().IsTouchingLayers();
 	}

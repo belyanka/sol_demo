@@ -22,7 +22,9 @@ public class DoorController : TimeStopable, IButtonSubscriber
     // Use this for initialization
     void Start()
     {
-        buttons.ForEach(b => b.Subscribe(this));
+        
+        if(buttons != null)buttons.ForEach(b => b.Subscribe(this));    
+        
     }
 
     public void Open()

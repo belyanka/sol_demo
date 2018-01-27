@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoxCannon : TimeStopable, IButtonSubscriber {
+public class ObjectCannon : TimeStopable, IButtonSubscriber {
 
 	public Vector2 direction;
 	public float force;
