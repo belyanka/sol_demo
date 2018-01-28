@@ -528,6 +528,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114280461250645892, guid: cff3b6cbfab8207459b8c4d81aed01ed,
+        type: 2}
+      propertyPath: _routeList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4634979967368312, guid: cff3b6cbfab8207459b8c4d81aed01ed, type: 2}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -572,7 +577,27 @@ Prefab:
     - target: {fileID: 114280461250645892, guid: cff3b6cbfab8207459b8c4d81aed01ed,
         type: 2}
       propertyPath: pauseTime
-      value: 3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114280461250645892, guid: cff3b6cbfab8207459b8c4d81aed01ed,
+        type: 2}
+      propertyPath: _routeList.Array.data[0].x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114280461250645892, guid: cff3b6cbfab8207459b8c4d81aed01ed,
+        type: 2}
+      propertyPath: _routeList.Array.data[0].y
+      value: 3.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114280461250645892, guid: cff3b6cbfab8207459b8c4d81aed01ed,
+        type: 2}
+      propertyPath: _routeList.Array.data[1].y
+      value: 3.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114280461250645892, guid: cff3b6cbfab8207459b8c4d81aed01ed,
+        type: 2}
+      propertyPath: _routeList.Array.data[1].x
+      value: 5.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cff3b6cbfab8207459b8c4d81aed01ed, type: 2}
