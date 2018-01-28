@@ -6,6 +6,7 @@
 /Assets/AssetStoreTools*
 
 /.idea/
+/UnityPackageManager/
 # Visual Studio 2015 cache directory
 /.vs/
 
