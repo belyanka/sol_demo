@@ -20,7 +20,7 @@ public class FallingObject : TimeStopable {
 			if (!inSphere) {
 				savedVelocity = rb.velocity;
 				savedGravity = rb.gravityScale;
-				//rb.gravityScale = 0;
+				rb.gravityScale = 0;
 				rb.velocity=Vector2.zero;
 				rb.Sleep();
 				inSphere = true;
@@ -29,7 +29,7 @@ public class FallingObject : TimeStopable {
 		else {
 			if (inSphere) {
 				rb.velocity = savedVelocity;
-				//rb.gravityScale = savedGravity;
+				rb.gravityScale = savedGravity;
 				rb.WakeUp();
 				inSphere = false;
 			}
@@ -38,7 +38,7 @@ public class FallingObject : TimeStopable {
 
 	public void ResetStatus() {
 		inSphere = false;
-		//savedGravity = 1f;
+		savedGravity = 1f;
 		savedVelocity=Vector2.zero;
 	}
 }

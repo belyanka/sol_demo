@@ -50,7 +50,11 @@ public class PlayerController : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Enemy"))
 		{
-			gameController.GameOver();
+			SetDead();
 		}
+	}
+
+	public void SetDead() {
+		gameController.GameOver();
 	}
 }
