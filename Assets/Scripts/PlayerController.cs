@@ -6,6 +6,7 @@ using UnityEngine.Video;
 public class PlayerController : MonoBehaviour
 {
 	public float speed;
+	public float jumpForce = 20f;
 	public LayerMask groundMask;
 	public Transform groundCheck; 
 	public GameController gameController;
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
 		if (Input.GetButtonDown("Jump") && grounded)
 		{
-			_rigidbody2D.AddForce(transform.up*20f, ForceMode2D.Impulse);
+			_rigidbody2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
 		}
 	}
 	
