@@ -23,11 +23,7 @@ public class PlayerController : MonoBehaviour
 	}
 
 	private void Update()
-	{
-		//так работало видимо лишь из-за погрешности деления пополам, т.к. .bounds.min должен возвращать то же самое,
-		//но с ним не работает без прибавления микро-вектора вниз 
-		
-		//var bottom = new Vector2(transform.position.x, transform.position.y - _collider2D.bounds.size.y / 2); 
+	{ 
 		
 		//grounded = Physics2D.Linecast(transform.position, _collider2D.bounds.min + new Vector3(0, -0.01f, 0), 1 << LayerMask.NameToLayer("Ground"));
 		grounded = Physics2D.OverlapCircle(groundCheck.position,0.2f,groundMask);
