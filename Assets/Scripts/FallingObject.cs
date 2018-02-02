@@ -9,7 +9,7 @@ public class FallingObject : TimeStopable {
 	private float savedGravity;
 	private Vector2 savedVelocity;
 
-	private void Start() {
+	private void Awake() {
 		TimeSphere = GameObject.FindGameObjectWithTag("TimeSphere").GetComponent<Collider2D>();
 		rb = GetComponent<Rigidbody2D>();
 		inSphere = false;
@@ -38,6 +38,8 @@ public class FallingObject : TimeStopable {
 
 	public void ResetStatus() {
 		inSphere = false;
+		rb.gravityScale = 1f;
+		rb.velocity = Vector2.zero;
 		savedGravity = 1f;
 		savedVelocity=Vector2.zero;
 	}
