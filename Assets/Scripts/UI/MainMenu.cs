@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
@@ -14,7 +11,16 @@ public class MainMenu : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
+        int sceneCount = SceneManager.sceneCountInBuildSettings;
+
+        for (int i = 1; i < sceneCount; i++)
+        {
+            GameObject newButton = Instantiate(buttonPrefab);
+            newButton.transform.SetParent(panel);
+            newButton.GetComponent<ButtonScript>().SceneNumber = i;
+            newButton.GetComponentInChildren<Text>().text = SceneUtility.GetScenePathByBuildIndex(i);
+        }
+        /*EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
 
         for (int i = 1; i < scenes.Length; i++)
         {
@@ -22,7 +28,9 @@ public class MainMenu : MonoBehaviour
             newButton.transform.SetParent(panel);
             newButton.GetComponent<ButtonScript>().SceneNumber = i;
             newButton.GetComponentInChildren<Text>().text = scenes[i].path;
-        }
+        }*/
+
+
     }
 
     public void QuitGame()
