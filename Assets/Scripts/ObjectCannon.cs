@@ -25,7 +25,7 @@ public class ObjectCannon : TimeStopable, IButtonSubscriber {
 		buttons.ForEach(b => b.Subscribe(this));
 	}
 
-	private void Update() {
+	private void FixedUpdate() {
 		if (canShoot) {
 			Shoot();
 		}
