@@ -11,6 +11,6 @@ public class TimeStopable : MonoBehaviour {
 		{
 			return true;
 		}
-		return Vector3.Distance(transform.position, TimeSphere.transform.position) <= TimeSphere.bounds.size.x / 2;
+		return Vector2.Distance(transform.position, TimeSphere.transform.position) <= TimeSphere.bounds.size.x / 2;
 	}
 }
