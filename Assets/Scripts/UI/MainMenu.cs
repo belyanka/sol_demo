@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
         for (int i = 1; i < sceneCount; i++)
         {
             GameObject newButton = Instantiate(buttonPrefab);
-            newButton.transform.SetParent(panel);
+            newButton.transform.SetParent(panel,false);
             newButton.GetComponent<ButtonScript>().SceneNumber = i;
             newButton.GetComponentInChildren<Text>().text = SceneUtility.GetScenePathByBuildIndex(i);
         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CnControls;
 using UnityEngine.Video;
 
 public class PlayerController : MonoBehaviour
@@ -29,7 +30,8 @@ public class PlayerController : MonoBehaviour
 		//grounded = Physics2D.Linecast(transform.position, _collider2D.bounds.min + new Vector3(0, -0.01f, 0), 1 << LayerMask.NameToLayer("Ground"));
 		grounded = Physics2D.OverlapCircle(groundCheck.position,0.2f,groundMask);
 
-		if (Input.GetButtonDown("Jump") && grounded)
+		//if (Input.GetButtonDown("Jump") && grounded)
+		if(CnInputManager.GetButtonDown("Jump"))
 		{
 			_rigidbody2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
 		}
@@ -37,7 +39,8 @@ public class PlayerController : MonoBehaviour
 	
 	private void FixedUpdate()
 	{
-		float moveHorizontal = Input.GetAxisRaw("Horizontal");
+		//float moveHorizontal = Input.GetAxisRaw("Horizontal");
+		float moveHorizontal = CnInputManager.GetAxisRaw("Horizontal");
 
 		_rigidbody2D.velocity = new Vector2(moveHorizontal * speed, _rigidbody2D.velocity.y);
 
