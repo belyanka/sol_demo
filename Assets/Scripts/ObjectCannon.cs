@@ -11,11 +11,11 @@ public class ObjectCannon : TimeStopable, IButtonSubscriber {
 	public GameObject shot;
 	public int poolSize;
 	private List<GameObject> shotsPool;
-	private bool canShoot;
+	private bool mustShoot;
 	
 	// Use this for initialization
 	void Start () {
-		canShoot = false;
+		mustShoot = false;
 		shotsPool = new List<GameObject>(poolSize);
 		for (int i = 0; i < poolSize; i++) {
 			GameObject obj = Instantiate(shot,spawnPoint.position,Quaternion.identity);
@@ -26,36 +26,34 @@ public class ObjectCannon : TimeStopable, IButtonSubscriber {
 	}
 
 	private void FixedUpdate() {
-		if (canShoot) {
+		if (mustShoot && IsCanMove()) {
 			Shoot();
+			mustShoot = false;
 		}
 	}
 
 	void Shoot() {
-		if (IsCanMove()) {
-			//shoot an object in direction from spawnPoint
-			bool found = false;
-			for (int i = 0; i < poolSize; i++) {
-				Rigidbody2D rb = shotsPool[i].GetComponent<Rigidbody2D>();
-				if (!shotsPool[i].activeInHierarchy && !found) {
-					//shoot
-					shotsPool[i].SetActive(true);			
-					rb.position = spawnPoint.position;
-					rb.AddForce(direction*force,ForceMode2D.Impulse);
-					found = true;
-				}
-				else {
-					shotsPool[i].GetComponent<FallingObject>().ResetStatus();
-					shotsPool[i].SetActive(false);
-				}
+		//shoot an object in direction from spawnPoint
+		bool found = false;
+		for (int i = 0; i < poolSize; i++) {
+			Rigidbody2D rb = shotsPool[i].GetComponent<Rigidbody2D>();
+			if (!shotsPool[i].activeInHierarchy && !found) {
+				//shoot
+				shotsPool[i].SetActive(true);			
+				rb.position = spawnPoint.position;
+				rb.AddForce(direction*force,ForceMode2D.Impulse);
+				found = true;
 			}
-			canShoot = false;
+			else {
+				shotsPool[i].GetComponent<FallingObject>().ResetStatus();
+				shotsPool[i].SetActive(false);
+			}
 		}
 	}
 
 	public void OnButtonPressed(ButtonController b) {
-		//shoot
-		canShoot = true;
+		//will shoot ASAP on FixedUpdate event
+		mustShoot = true;
 	}
 
 	public void OnButtonReleased(ButtonController b) {

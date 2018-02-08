@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 		grounded = Physics2D.OverlapCircle(groundCheck.position,0.2f,groundMask);
 
 		//if (Input.GetButtonDown("Jump") && grounded)
-		if(CnInputManager.GetButtonDown("Jump"))
+		if(CnInputManager.GetButtonDown("Jump") && grounded)
 		{
 			_rigidbody2D.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
 		}
