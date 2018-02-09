@@ -116,7 +116,7 @@ MonoBehaviour:
   buttons:
   - {fileID: 0}
   spawnPoint: {fileID: 4090859831645002}
-  shot: {fileID: 1100522456887638, guid: 3626916f1cb15c640aeea84487a9e1da, type: 2}
+  shot: {fileID: 1122574690153740, guid: 1903323388562474280b0d5d8180144c, type: 2}
   poolSize: 2
 --- !u!212 &212226756176301462
 SpriteRenderer:
