@@ -7,6 +7,7 @@ TagManager:
   - TimeSphere
   - Enemy
   - Hazard
+  - LevelManager
   layers:
   - Default
   - TransparentFX

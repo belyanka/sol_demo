@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -6,30 +7,20 @@ public class MainMenu : MonoBehaviour
 {
     public RectTransform panel;
     public GameObject buttonPrefab;
-
+    private LevelManager manager;
 
     // Use this for initialization
-    void Start()
-    {
-        int sceneCount = SceneManager.sceneCountInBuildSettings;
+    void Start() {
 
-        for (int i = 1; i < sceneCount; i++)
-        {
+        Dictionary<int, string> levels = LevelManager.Instance.GetLevelsList();
+
+        foreach (var level in levels) {
+            
             GameObject newButton = Instantiate(buttonPrefab);
             newButton.transform.SetParent(panel,false);
-            newButton.GetComponent<ButtonScript>().SceneNumber = i;
-            newButton.GetComponentInChildren<Text>().text = SceneUtility.GetScenePathByBuildIndex(i);
+            newButton.GetComponent<ButtonScript>().SceneNumber = level.Key;
+            newButton.GetComponentInChildren<Text>().text = level.Value;
         }
-        /*EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
-
-        for (int i = 1; i < scenes.Length; i++)
-        {
-            GameObject newButton = Instantiate(buttonPrefab);
-            newButton.transform.SetParent(panel);
-            newButton.GetComponent<ButtonScript>().SceneNumber = i;
-            newButton.GetComponentInChildren<Text>().text = scenes[i].path;
-        }*/
-
 
     }
 
