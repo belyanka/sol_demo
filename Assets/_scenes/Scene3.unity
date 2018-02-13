@@ -122,7 +122,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4597146180527478, guid: 184a012a2eebed14cb90f8b8688fe86c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.5
+      value: 3.53
       objectReference: {fileID: 0}
     - target: {fileID: 4597146180527478, guid: 184a012a2eebed14cb90f8b8688fe86c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2432,11 +2432,6 @@ Prefab:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 1962541736}
-    - target: {fileID: 114239926402296536, guid: 5fab995c60fbc45078930f2f5247724f,
-        type: 2}
-      propertyPath: jumpForce
-      value: 15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5fab995c60fbc45078930f2f5247724f, type: 2}
   m_IsPrefabParent: 0
