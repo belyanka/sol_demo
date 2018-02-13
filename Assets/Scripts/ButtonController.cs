@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class ButtonController : TimeStopable, INotifier<IButtonSubscriber>
 {	
-	protected Sprite _sprite;
+	private Sprite _spriteReleased;
+	private Sprite _spritePressed;
+	
+	protected SpriteRenderer _spriteRenderer;
 	protected List<IButtonSubscriber> _subscribers;
 
 	public bool IsPressed { get; protected set; }
@@ -23,22 +26,20 @@ public class ButtonController : TimeStopable, INotifier<IButtonSubscriber>
 
 	private void Start()
 	{
-		OnStart();
-	}
-
-	protected void OnStart()
-	{
-		_sprite = GetComponentInChildren<SpriteRenderer>().sprite;
+		_spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+		_spriteReleased = _spriteRenderer.sprite;
+		//todo: избавиться от хардкода
+		_spritePressed = Resources.Load<Sprite>("Sprites/button_pressed");
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (!IsPressed && IsMustBePressed()) Press();
+		if (!IsPressed && IsMustBePressed()) PressAction();
 	}
 
 	private void OnTriggerExit2D(Collider2D other)
 	{		
-		if (IsPressed && !IsMustBePressed()) Release();
+		if (IsPressed && !IsMustBePressed()) ReleaseAction();
 	}
 
 	protected bool IsMustBePressed()
@@ -49,15 +50,23 @@ public class ButtonController : TimeStopable, INotifier<IButtonSubscriber>
 	public void Press()
 	{
 		IsPressed = true;
-		GetComponentInChildren<SpriteRenderer>().sprite = default(Sprite);
 		_subscribers.ForEach(subscriber => subscriber.OnButtonPressed(this));
+	}
+
+	private void PressAction() {
+		GetComponentInChildren<SpriteRenderer>().sprite = _spritePressed;
+		Press();
 	}
 
 	public void Release()
 	{
 		IsPressed = false;
-		GetComponentInChildren<SpriteRenderer>().sprite = _sprite;
 		_subscribers.ForEach(subscriber => subscriber.OnButtonReleased(this));
+	}
+
+	private void ReleaseAction() {
+		GetComponentInChildren<SpriteRenderer>().sprite = _spriteReleased;
+		Release();
 	}
 
 	public void Subscribe(IButtonSubscriber subscriber)
