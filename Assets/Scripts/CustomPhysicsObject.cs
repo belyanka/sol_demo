@@ -10,6 +10,7 @@ public class CustomPhysicsObject : MonoBehaviour {
 
 	protected Vector2 groundNormal;
 	protected Vector2 velocity;
+	protected Vector2 targetVelocity;
 	protected Rigidbody2D rb;
 	protected bool grounded;
 	protected ContactFilter2D contactFilter;
@@ -31,13 +32,30 @@ public class CustomPhysicsObject : MonoBehaviour {
 		contactFilter.useLayerMask = true;
 	}
 
+	void Update () 
+	{
+		targetVelocity = Vector2.zero;
+		ComputeVelocity (); 
+	}
+
+	protected virtual void ComputeVelocity()
+	{
+    
+	}
+	
 	private void FixedUpdate()
 	{
 		velocity += gravityModifier * Physics2D.gravity * Time.deltaTime;
+		velocity.x = targetVelocity.x;
+		
 		grounded = false;
 		Vector2 deltaPosition = velocity * Time.deltaTime;
 		
-		Vector2 move = Vector2.up * deltaPosition.y;
+		Vector2 moveAlongGround = new Vector2 (groundNormal.y, -groundNormal.x);
+
+		Vector2 move = moveAlongGround * deltaPosition.x;
+		Movement (move, false);
+		move = Vector2.up * deltaPosition.y;
 		Movement(move, true);
 	}
 
@@ -72,9 +90,9 @@ public class CustomPhysicsObject : MonoBehaviour {
 				{
 					velocity = velocity - projection * currentNormal;
 				}
-//
-//				float modifiedDistance = hitBufferList [i].distance - shellRadius;
-//				distance = modifiedDistance < distance ? modifiedDistance : distance;
+
+				float modifiedDistance = hitBufferList [i].distance - shellRadius;
+				distance = modifiedDistance < distance ? modifiedDistance : distance;
 			}
 		}
 		rb.position = rb.position + move.normalized * distance;
