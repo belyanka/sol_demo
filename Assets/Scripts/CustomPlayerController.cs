@@ -6,6 +6,7 @@ public class CustomPlayerController : CustomPhysicsObject {
 
 	public float maxSpeed = 7;
 	public float jumpTakeOffSpeed = 7;
+	public GameController gameController;
 
 //	private SpriteRenderer spriteRenderer;
 //	private Animator animator;
@@ -21,7 +22,7 @@ public class CustomPlayerController : CustomPhysicsObject {
 	{
 		Vector2 move = Vector2.zero;
 
-		move.x = Input.GetAxis ("Horizontal");
+		move.x = Input.GetAxisRaw ("Horizontal");
 
 		//todo: исправить тягучую физику
 		if (Input.GetButtonDown ("Jump") && grounded) {
@@ -43,5 +44,17 @@ public class CustomPlayerController : CustomPhysicsObject {
 //		animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
 
 		targetVelocity = move * maxSpeed;
+	}
+	
+	public void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.CompareTag("Enemy"))
+		{
+			SetDead();
+		}
+	}
+
+	public void SetDead() {
+		gameController.GameOver();
 	}
 }
