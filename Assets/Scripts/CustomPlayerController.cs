@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using CnControls;
 using UnityEngine;
 
 public class CustomPlayerController : CustomPhysicsObject {
@@ -8,13 +9,15 @@ public class CustomPlayerController : CustomPhysicsObject {
 	public float jumpTakeOffSpeed = 7;
 	public GameController gameController;
 
-//	private SpriteRenderer spriteRenderer;
+	private int directionX = 1;
+	private SpriteRenderer spriteRenderer;
 //	private Animator animator;
 
 	// Use this for initialization
-	void Awake () 
+	void Awake ()
 	{
-//		spriteRenderer = GetComponent<SpriteRenderer> (); 
+		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+		spriteRenderer = GetComponent<SpriteRenderer> (); 
 //		animator = GetComponent<Animator> ();
 	}
 
@@ -22,23 +25,23 @@ public class CustomPlayerController : CustomPhysicsObject {
 	{
 		Vector2 move = Vector2.zero;
 
-		move.x = Input.GetAxisRaw ("Horizontal");
+		move.x = CnInputManager.GetAxisRaw("Horizontal");
 
-		//todo: исправить тягучую физику
-		if (Input.GetButtonDown ("Jump") && grounded) {
+		if (CnInputManager.GetButtonDown ("Jump") && grounded) {
 			velocity.y = jumpTakeOffSpeed;
-		} else if (Input.GetButtonUp ("Jump")) 
+		} else if (CnInputManager.GetButtonUp ("Jump")) 
 		{
 			if (velocity.y > 0) {
 				velocity.y = velocity.y * 0.5f;
 			}
 		}
 
-//		bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f));
-//		if (flipSprite) 
-//		{
-//			spriteRenderer.flipX = !spriteRenderer.flipX;
-//		}
+		//bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f));
+		if (directionX*move.x < 0) 
+		{
+			spriteRenderer.flipX = !spriteRenderer.flipX;
+			directionX *= -1;
+		}
 
 //		animator.SetBool ("grounded", grounded);
 //		animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
@@ -56,5 +59,10 @@ public class CustomPlayerController : CustomPhysicsObject {
 
 	public void SetDead() {
 		gameController.GameOver();
+	}
+
+	public Vector2 GetVelocity()
+	{
+		return velocity;
 	}
 }
