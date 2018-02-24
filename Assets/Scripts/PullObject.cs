@@ -5,6 +5,7 @@ using UnityEngine;
 public class PullObject : MonoBehaviour {
 
 	private float rayDistance;
+	private float oldXPosition;
 	private Rigidbody2D rb;
 	public LayerMask rayMask;
 	
@@ -24,9 +25,16 @@ public class PullObject : MonoBehaviour {
 		Physics2D.queriesStartInColliders = false;
 		RaycastHit2D leftHit = Physics2D.Raycast(transform.position, Vector2.left, rayDistance,rayMask);
 		RaycastHit2D rightHit = Physics2D.Raycast(transform.position, Vector2.right, rayDistance,rayMask);
-		//todo: не толкать ящик, наверху которого что-то есть
-		//Collider2D upHit = Physics2D.OverlapCircle(new Vector2(transform.position.x,transform.position.y+1f), 0.4f, rayMask);
-	
+		// не толкать ящик, наверху которого что-то есть
+		Collider2D upHit = Physics2D.OverlapCircle(new Vector2(transform.position.x,transform.position.y+1f), 0.4f, rayMask);
+
+		if (upHit!=null)
+		{
+			transform.position = new Vector2(oldXPosition,transform.position.y);
+			return;
+		}
+		
+		oldXPosition = transform.position.x;
 		//если только игрок касается, то разрешить толкание или не касается никто
 		if (leftHit.collider!=null && leftHit.collider.gameObject.CompareTag("Player") && rightHit.collider==null)
 		{
