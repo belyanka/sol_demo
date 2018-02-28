@@ -444,7 +444,7 @@ Prefab:
     - target: {fileID: 224473380693960134, guid: c63ee785e4ee90240b296bec1af40531,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224789665470393212, guid: c63ee785e4ee90240b296bec1af40531,
         type: 2}
@@ -464,7 +464,7 @@ Prefab:
     - target: {fileID: 224789665470393212, guid: c63ee785e4ee90240b296bec1af40531,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224438218732394630, guid: c63ee785e4ee90240b296bec1af40531,
         type: 2}
@@ -484,7 +484,7 @@ Prefab:
     - target: {fileID: 224438218732394630, guid: c63ee785e4ee90240b296bec1af40531,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -64.24029
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224373226715117146, guid: c63ee785e4ee90240b296bec1af40531,
         type: 2}
@@ -504,7 +504,7 @@ Prefab:
     - target: {fileID: 224373226715117146, guid: c63ee785e4ee90240b296bec1af40531,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -192.72086
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c63ee785e4ee90240b296bec1af40531, type: 2}
@@ -594,7 +594,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 681454570}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 7d5d9ecc882161640a95adc94c170aec, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

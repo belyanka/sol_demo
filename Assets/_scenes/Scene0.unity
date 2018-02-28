@@ -1924,6 +1924,36 @@ Tilemap:
     m_DirtyIndex: 0
   - serializedVersion: 1
     m_DirtyIndex: 0
+--- !u!1 &767410156 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1111759729291834, guid: 5fab995c60fbc45078930f2f5247724f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1286285677}
+--- !u!61 &767410158
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 767410156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.84, y: 0.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &872877319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2241,7 +2271,8 @@ Prefab:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 1962541736}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 70160157199381528, guid: 5fab995c60fbc45078930f2f5247724f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5fab995c60fbc45078930f2f5247724f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1322398389
