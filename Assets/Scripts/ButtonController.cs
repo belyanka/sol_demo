@@ -6,7 +6,7 @@ using UnityEngine;
 public class ButtonController : TimeStopable, INotifier<IButtonSubscriber>
 {	
 	private Sprite _spriteReleased;
-	private Sprite _spritePressed;
+	public Sprite _spritePressed;
 	
 	protected SpriteRenderer _spriteRenderer;
 	protected List<IButtonSubscriber> _subscribers;
@@ -29,7 +29,7 @@ public class ButtonController : TimeStopable, INotifier<IButtonSubscriber>
 		_spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 		_spriteReleased = _spriteRenderer.sprite;
 		//todo: избавиться от хардкода
-		_spritePressed = Resources.Load<Sprite>("Sprites/button_pressed");
+		//_spritePressed = Resources.Load<Sprite>("Sprites/button_pressed");
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
