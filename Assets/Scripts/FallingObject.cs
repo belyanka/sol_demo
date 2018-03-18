@@ -32,9 +32,9 @@ public class FallingObject : TimeStopable {
 		} else {
 			if (!inSphere) {
 				SaveState();
-				Freeze();
 				inSphere = true;
 			}
+			Freeze();
 		}
 	}
 

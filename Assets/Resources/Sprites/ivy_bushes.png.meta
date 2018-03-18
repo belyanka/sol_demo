@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 70941a7a735972240bdfe2ad243f7d2b
-timeCreated: 1520877960
+timeCreated: 1521294864
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -11,6 +11,8 @@ TextureImporter:
     21300008: ivy_bushes_4
     21300010: ivy_bushes_5
     21300012: ivy_bushes_6
+    21300014: ivy_bushes_7
+    21300016: ivy_bushes_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -110,20 +112,6 @@ TextureImporter:
       name: ivy_bushes_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 269
-        width: 5
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ivy_bushes_1
-      rect:
-        serializedVersion: 2
         x: 8
         y: 156
         width: 288
@@ -135,13 +123,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
+      name: ivy_bushes_1
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 146
+        width: 410
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
       name: ivy_bushes_2
       rect:
         serializedVersion: 2
-        x: 302
-        y: 160
-        width: 411
-        height: 684
+        x: 882
+        y: 148
+        width: 424
+        height: 671
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +154,10 @@ TextureImporter:
       name: ivy_bushes_3
       rect:
         serializedVersion: 2
-        x: 675
-        y: 168
-        width: 300
-        height: 620
+        x: 899
+        y: 771
+        width: 4
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +168,10 @@ TextureImporter:
       name: ivy_bushes_4
       rect:
         serializedVersion: 2
-        x: 990
-        y: 148
-        width: 398
-        height: 671
+        x: 1348
+        y: 160
+        width: 372
+        height: 618
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,10 +182,10 @@ TextureImporter:
       name: ivy_bushes_5
       rect:
         serializedVersion: 2
-        x: 1392
-        y: 156
-        width: 368
-        height: 620
+        x: 1784
+        y: 161
+        width: 248
+        height: 644
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +196,38 @@ TextureImporter:
       name: ivy_bushes_6
       rect:
         serializedVersion: 2
-        x: 1784
-        y: 161
-        width: 248
-        height: 644
+        x: 6
+        y: 269
+        width: 5
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ivy_bushes_7
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 178
+        width: 4
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ivy_bushes_8
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 188
+        width: 6
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
