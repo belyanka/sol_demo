@@ -33,8 +33,21 @@ public class CameraMovement : MonoBehaviour
 			newPosition.x = Mathf.Clamp(player.transform.position.x, xMin, xMax);
 			newPosition.y = Mathf.Clamp(player.transform.position.y, yMin, yMax);
 			newPosition = Vector3.Lerp(transform.position, newPosition, smoothness * Time.deltaTime);
-			transform.position = new Vector3(newPosition.x,newPosition.y,transform.position.z);
+			
+			transform.position = RoundToNearestPixel(new Vector3(newPosition.x,newPosition.y,transform.position.z));
 	
 		}
+	}
+	
+	float RoundToNearestPixel (float unityUnits) {
+		float valueInPixels = Mathf.Round(unityUnits * 108); 
+		return valueInPixels * (1 / 108f); 
+	}
+
+	public Vector3 RoundToNearestPixel (Vector3 pos) {
+		pos.x = RoundToNearestPixel (pos.x);
+		pos.y = RoundToNearestPixel (pos.y);
+
+		return pos;
 	}
 }
