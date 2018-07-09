@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Hazard
   - LevelManager
+  - StickySurface
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - Ground
   - Ignore Collisions
-  - 
+  - StickySurface
   - 
   - 
   - 
