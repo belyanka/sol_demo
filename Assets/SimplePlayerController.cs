@@ -12,6 +12,7 @@ public class SimplePlayerController : MonoBehaviour
 	private Rigidbody2D rigidBody;
 	private LayerMask groundMask;
 
+	private bool jumpNextFixedUpdate;
 
 	// Use this for initialization
 	public void Awake()
@@ -26,15 +27,24 @@ public class SimplePlayerController : MonoBehaviour
 		checkGroundCenter = transform.Find("CheckGroundCenter");
 	}
 
+	private void Update()
+	{
+		if (CnInputManager.GetButtonDown("Jump") && IsGrounded())
+		{
+			jumpNextFixedUpdate = true;
+		}
+	}
+
 	public void FixedUpdate()
 	{
 		Vector2 currentVelocity = rigidBody.velocity;
 		currentVelocity.x = walkingSpeed * CnInputManager.GetAxisRaw("Horizontal");
 		
 		//todo: пофиксить прыжок - нажатия на кнопку обрабатываются не всегда, возможно их стоит делать в Update()
-		if (CnInputManager.GetButtonDown("Jump") && IsGrounded())
+		if (jumpNextFixedUpdate)
 		{
 			currentVelocity.y = jumpTakeOffSpeed;
+			jumpNextFixedUpdate = false; 
 		}
 		else if (CnInputManager.GetButtonUp("Jump"))
 		{
