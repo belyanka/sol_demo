@@ -2879,6 +2879,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &739369796 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1111759729291834, guid: 5fab995c60fbc45078930f2f5247724f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1286285677}
+--- !u!114 &739369802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 739369796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902854dbed0f8481fb7902a4d916deb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkingSpeed: 7
+  jumpTakeOffSpeed: 12
+  checkGroundRadius: 0.2
+  gameController: {fileID: 0}
 --- !u!1 &746902742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3763,7 +3783,7 @@ Prefab:
     - target: {fileID: 50407471407163658, guid: 5fab995c60fbc45078930f2f5247724f,
         type: 2}
       propertyPath: m_UseFullKinematicContacts
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 50407471407163658, guid: 5fab995c60fbc45078930f2f5247724f,
         type: 2}
@@ -3779,6 +3799,15 @@ Prefab:
         type: 2}
       propertyPath: m_Mass
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768177746636474, guid: 5fab995c60fbc45078930f2f5247724f, type: 2}
+      propertyPath: m_Name
+      value: CheckGroundCenter
+      objectReference: {fileID: 0}
+    - target: {fileID: 50407471407163658, guid: 5fab995c60fbc45078930f2f5247724f,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 70160157199381528, guid: 5fab995c60fbc45078930f2f5247724f, type: 2}
