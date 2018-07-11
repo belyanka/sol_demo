@@ -13,13 +13,15 @@ public class DoorController : TimeStopable, IButtonSubscriber
 
     private Sprite _sprite;
     private int _pressedButtonsNum;
+    private SpriteRenderer _spriteRenderer;
 
 
     // Use this for initialization
     private void Awake()
     {
         _pressedButtonsNum = 0;
-        _sprite = GetComponentInChildren<SpriteRenderer>().sprite;
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        if (_spriteRenderer) _sprite = _spriteRenderer.sprite;
 
         if (!isClosedInitially) Open();
     }
@@ -33,13 +35,13 @@ public class DoorController : TimeStopable, IButtonSubscriber
     public void Open()
     {
         GetComponent<Collider2D>().enabled = false;
-        GetComponentInChildren<SpriteRenderer>().sprite = default(Sprite);
+        if (_spriteRenderer) _spriteRenderer.sprite = default(Sprite);
     }
 
     public void Close()
     {
         GetComponent<Collider2D>().enabled = true;
-        GetComponentInChildren<SpriteRenderer>().sprite = _sprite;
+        if (_spriteRenderer) _spriteRenderer.sprite = _sprite;
     }
 
     public void OnButtonPressed(ButtonController b)

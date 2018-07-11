@@ -17,11 +17,11 @@ public class Trigger : ButtonController {
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (IsPressed && IsMustBePressed())
+		if (IsPressed)
 		{
 			ReleaseAction();
 		}
-		else if(!IsPressed && IsMustBePressed())
+		else
 		{
 			PressAction();
 		}

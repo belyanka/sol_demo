@@ -1,68 +1,67 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using CnControls;
+﻿using CnControls;
 using UnityEngine;
 
-public class CustomPlayerController : CustomPhysicsObject {
+public class CustomPlayerController : CustomPhysicsObject
+{
+    public float walkingSpeed = 7;
+    public float jumpTakeOffSpeed = 7;
+    public GameController gameController;
 
-	public float maxSpeed = 7;
-	public float jumpTakeOffSpeed = 7;
-	public GameController gameController;
+    // Use this for initialization
+    void Awake()
+    {
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+    }
 
-	private int directionX = 1;
-	private SpriteRenderer spriteRenderer;
-//	private Animator animator;
+    protected override Vector2 GetExpectedVelocity()
+    {
+        //todo: разобраться, почему не всегда срабатывает прыжок
+        //todo: возможно стоит перенести рассчет expectedVelocity в Update() и хранить в поле, здесь только возвращать
+        Vector2 expectedVelocity = base.GetExpectedVelocity();
 
-	// Use this for initialization
-	void Awake ()
-	{
-		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-		spriteRenderer = GetComponent<SpriteRenderer> (); 
-//		animator = GetComponent<Animator> ();
-	}
+        expectedVelocity.x = walkingSpeed * CnInputManager.GetAxisRaw("Horizontal");
 
-	protected override void ComputeVelocity()
-	{
-		Vector2 move = Vector2.zero;
+        if (CnInputManager.GetButtonDown("Jump") && Grounded)
+        {
+            expectedVelocity.y = jumpTakeOffSpeed;
+        }
+        else if (CnInputManager.GetButtonUp("Jump"))
+        {
+            if (VelocityCurrent.y > 0)
+            {
+                expectedVelocity.y = VelocityCurrent.y * 0.5f;
+            }
+        }
 
-		move.x = CnInputManager.GetAxisRaw("Horizontal");
+        return expectedVelocity; //move * maxSpeed;
+    }
 
-		if (CnInputManager.GetButtonDown ("Jump") && grounded) {
-			velocity.y = jumpTakeOffSpeed;
-		} else if (CnInputManager.GetButtonUp ("Jump")) 
-		{
-			if (velocity.y > 0) {
-				velocity.y = velocity.y * 0.5f;
-			}
-		}
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("StickySurface"))
+        {
+            transform.parent = other.transform;
+        }
+    }
 
-		//bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f));
-		if (directionX*move.x < 0) 
-		{
-			spriteRenderer.flipX = !spriteRenderer.flipX;
-			directionX *= -1;
-		}
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("StickySurface"))
+        {
+            transform.parent = null;
+        }
+    }
 
-//		animator.SetBool ("grounded", grounded);
-//		animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
+    public void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            SetDead();
+        }
+    }
 
-		targetVelocity = move * maxSpeed;
-	}
-	
-	public void OnCollisionEnter2D(Collision2D other)
-	{
-		if (other.gameObject.CompareTag("Enemy"))
-		{
-			SetDead();
-		}
-	}
-
-	public void SetDead() {
-		gameController.GameOver();
-	}
-
-	public Vector2 GetVelocity()
-	{
-		return velocity;
-	}
+    public void SetDead()
+    {
+        gameController.GameOver();
+    }
 }
