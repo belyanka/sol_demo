@@ -152,12 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 114590190036413244, guid: d448b4edc636c429aac53d324af6666b,
-        type: 2}
-      propertyPath: _spritePressed
-      value: 
-      objectReference: {fileID: 21300000, guid: 78b943b25cba72849aee16a9d5f2c060,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d448b4edc636c429aac53d324af6666b, type: 2}
   m_IsPrefabParent: 0
@@ -303,7 +297,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f0000000000000000000000000000003f0000003f000000000000000000000000000000bf000000bf0000000000000000000000000000003f000000bf000000000000000000000000
+      _typelessdata: 000000bf0000003f00000000000000000000803f0000003f0000003f000000000000803f0000803f000000bf000000bf0000000000000000000000000000003f000000bf000000000000803f00000000
     textureRect:
       serializedVersion: 2
       x: 0
@@ -886,7 +880,7 @@ Prefab:
     - target: {fileID: 224438218732394630, guid: c63ee785e4ee90240b296bec1af40531,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -126.121
+      value: -77.51791
       objectReference: {fileID: 0}
     - target: {fileID: 224373226715117146, guid: c63ee785e4ee90240b296bec1af40531,
         type: 2}
@@ -906,7 +900,7 @@ Prefab:
     - target: {fileID: 224373226715117146, guid: c63ee785e4ee90240b296bec1af40531,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -378.363
+      value: -232.55371
       objectReference: {fileID: 0}
     - target: {fileID: 1070852833846080, guid: c63ee785e4ee90240b296bec1af40531, type: 2}
       propertyPath: m_IsActive
@@ -2713,7 +2707,7 @@ Tilemap:
   - serializedVersion: 1
     m_DirtyIndex: 0
   - serializedVersion: 1
-    m_DirtyIndex: 1
+    m_DirtyIndex: 0
   - serializedVersion: 1
     m_DirtyIndex: 0
   - serializedVersion: 1
