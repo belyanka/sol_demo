@@ -77,22 +77,6 @@ public class SimplePlayerController : MonoBehaviour
         return Physics2D.OverlapCircle(_checkGroundCenter.position, CheckGroundRadius, _groundMask) != null;
     }
 
-    public void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("StickySurface"))
-        {
-            transform.parent = other.transform;
-        }
-    }
-
-    public void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("StickySurface"))
-        {
-            transform.parent = null;
-        }
-    }
-
     public void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
