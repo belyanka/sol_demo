@@ -3,55 +3,93 @@ using UnityEngine;
 
 public class DoorController : TimeStopable, IButtonSubscriber
 {
-    public List<ButtonController> buttons;
-    public bool isClosedInitially = true;
-    public bool isInverted;
+    public List<ButtonController> Buttons;
+    public ButtonsState ButtonsStateToOpen = ButtonsState.PressedAll;
 
-    private Sprite _sprite;
     private int _pressedButtonsNum;
-    private SpriteRenderer _spriteRenderer;
 
+    private SpriteRenderer _spriteRenderer;
+    private Collider2D _collider;
 
     // Use this for initialization
     private void Awake()
     {
         _pressedButtonsNum = 0;
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        if (_spriteRenderer) _sprite = _spriteRenderer.sprite;
-
-        if (!isClosedInitially) Open();
+        _collider = GetComponent<Collider2D>();
+        OnPressedButtonsCountChanged();
     }
 
     // Use this for binding after init
     void Start()
     {
-        if (buttons != null) buttons.ForEach(b => b.Subscribe(this));
+        if (Buttons != null) Buttons.ForEach(b => b.Subscribe(this));
     }
 
     public void Open()
     {
-        GetComponent<Collider2D>().enabled = false;
-        if (_spriteRenderer) _spriteRenderer.sprite = default(Sprite);
+        if (_collider) 
+            _collider.enabled = false;
+        if (_spriteRenderer) 
+            _spriteRenderer.enabled = false;
     }
 
     public void Close()
     {
-        GetComponent<Collider2D>().enabled = true;
-        if (_spriteRenderer) _spriteRenderer.sprite = _sprite;
+        if (_collider) 
+            _collider.enabled = true;
+        if (_spriteRenderer) 
+            _spriteRenderer.enabled = true;
     }
 
     public void OnButtonPressed(ButtonController b)
     {
         _pressedButtonsNum++;
-        if (isInverted) Close();
-        else if (_pressedButtonsNum == buttons.Count)
-            Open();
+        OnPressedButtonsCountChanged();
     }
 
     public void OnButtonReleased(ButtonController b)
     {
         _pressedButtonsNum--;
-        if (isInverted && _pressedButtonsNum == 0) Open();
-        else Close();
+        OnPressedButtonsCountChanged();
+    }
+
+    private void OnPressedButtonsCountChanged()
+    {
+        switch (ButtonsStateToOpen)
+        {
+            case ButtonsState.PressedAll:
+                if (_pressedButtonsNum == Buttons.Count)
+                    Open();
+                else
+                    Close();
+                break;
+            case ButtonsState.PressedAtLeastOne:
+                if (_pressedButtonsNum > 0)
+                    Open();
+                else
+                    Close();
+                break;
+            case ButtonsState.ReleasedAll:
+                if (_pressedButtonsNum == 0)
+                    Open();
+                else
+                    Close();
+                break;
+            case ButtonsState.ReleasedAtLeastOne:
+                if (_pressedButtonsNum < Buttons.Count)
+                    Open();
+                else
+                    Close();
+                break;
+        }
+    }
+
+    public enum ButtonsState
+    {
+        PressedAll,
+        PressedAtLeastOne,
+        ReleasedAll,
+        ReleasedAtLeastOne
     }
 }

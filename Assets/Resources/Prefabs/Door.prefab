@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 61934897384389648}
   - component: {fileID: 114470378397398374}
   m_Layer: 0
-  m_Name: Door 1
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +52,7 @@ Transform:
   m_GameObject: {fileID: 1402302880806526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.0625, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4872815545822984}
   m_RootOrder: 0
@@ -65,7 +65,7 @@ Transform:
   m_GameObject: {fileID: 1624983133492456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.5, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4755062553775702}
   m_Father: {fileID: 0}
@@ -151,7 +151,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1, y: 4}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.333
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
