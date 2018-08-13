@@ -14,6 +14,7 @@ public class CameraMovement : MonoBehaviour
 	private float xMin;
 	private float yMax;
 	private float yMin;
+	private float screenHeightUnit = 108f;
 
 	private void Start()
 	{
@@ -25,7 +26,7 @@ public class CameraMovement : MonoBehaviour
 		yMin = visibleArea.bounds.min.y + Camera.main.orthographicSize;
 	}
 
-	// Update is called once per frame
+	// Update is called once per frame 
 	void Update ()
 	{
 		if (followPlayer)
@@ -40,8 +41,8 @@ public class CameraMovement : MonoBehaviour
 	}
 	
 	float RoundToNearestPixel (float unityUnits) {
-		float valueInPixels = Mathf.Round(unityUnits * 108); 
-		return valueInPixels * (1 / 108f); 
+		float valueInPixels = Mathf.Round(unityUnits * screenHeightUnit); 
+		return valueInPixels * (1 / screenHeightUnit); 
 	}
 
 	public Vector3 RoundToNearestPixel (Vector3 pos) {

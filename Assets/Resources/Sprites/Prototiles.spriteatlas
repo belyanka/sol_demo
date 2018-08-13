@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Prototiles
+  m_EditorData:
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingParameters:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: a9bcfec44628f954b9df6274f56919d4, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: b256d78d417a92f46bf117556a6a4678, type: 3}
+  - {fileID: 21300000, guid: ca79d64e1747bbc44b64f0b6a504eb3c, type: 3}
+  - {fileID: 21300000, guid: dbe0e190b2542ea4b9e2a19c21ff5174, type: 3}
+  - {fileID: 21300000, guid: 23a5c03763ec1bd4ea8b6a98a30fd1f0, type: 3}
+  - {fileID: 21300000, guid: 629a3d73549235b47b1c9fc26f6c5488, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - ground
+  - bush_tile
+  - ground_grass
+  - platform2
+  - platform
+  m_Tag: Prototiles
+  m_IsVariant: 0
