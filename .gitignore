@@ -6,6 +6,8 @@
 /Assets/AssetStoreTools*
 /Assets/Plugins/
 /Assets/Plugins.meta
+/Assets/CorgiEngine/
+/Assets/CorgiEngine.meta
 
 /.idea/
 /UnityPackageManager/
