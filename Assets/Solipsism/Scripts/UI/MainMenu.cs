@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,12 +7,12 @@ public class MainMenu : MonoBehaviour
 {
     public RectTransform panel;
     public GameObject buttonPrefab;
-    private LevelManager manager;
+    private LevelManagerSolipsism manager;
 
     // Use this for initialization
     void Start() {
 
-        Dictionary<int, string> levels = LevelManager.Instance.GetLevelsList();
+        Dictionary<int, string> levels = LevelManagerSolipsism.Instance.GetLevelsList();
 
         foreach (var level in levels) {
             

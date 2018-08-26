@@ -11,10 +11,10 @@ public class PlaySceneButtons : MonoBehaviour {
 	}
 
 	public void RestartLevel() {
-		LevelManager.Instance.RestartLevel();
+		LevelManagerSolipsism.Instance.RestartLevel();
 	}
 
 	public void LoadNextLevel() {
-		LevelManager.Instance.LoadNextLevel();
+		LevelManagerSolipsism.Instance.LoadNextLevel();
 	}
 }

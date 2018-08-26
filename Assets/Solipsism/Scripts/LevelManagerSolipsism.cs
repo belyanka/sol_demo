@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour {
+public class LevelManagerSolipsism : MonoBehaviour {
     
-    private static LevelManager instance;
+    private static LevelManagerSolipsism instance;
     private Dictionary<int, string> levels;
 
-    public static LevelManager Instance
+    public static LevelManagerSolipsism Instance
     {
         get {
             if (instance == null)
             {
-                instance = GameObject.FindObjectOfType<LevelManager>();
+                instance = GameObject.FindObjectOfType<LevelManagerSolipsism>();
              
                 if (instance == null)
                 {
-                    GameObject container = new GameObject("LevelManager");
-                    instance = container.AddComponent<LevelManager>();
+                    GameObject container = new GameObject("LevelManagerSolipsism");
+                    instance = container.AddComponent<LevelManagerSolipsism>();
                 }
             }
      
